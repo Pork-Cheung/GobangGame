@@ -1,6 +1,11 @@
-
+/**
+ * 控制层
+ * 负责棋盘数据的处理
+ * 视图作为game实例的属性
+ * 
+ */
 const skins = ['dom', 'canvas'],
-    chessColors = ['空','白子','黑子']
+    chessColors = [' ','white','black']
 // 循环链表表示玩家，1为白子，2为黑子，白子先手
 const players = {val: 1, next: null};
 players.next = {val: 2, next: null};
@@ -198,7 +203,7 @@ document.getElementById('change-style').addEventListener('click', () => {
     game.chessBoard.board.remove();
     game.getChessBoard();
     game.chessBoard.init();
-    document.querySelector('aside > p:first-child > span:last-child').innerHTML = `${game.skin}`;
+    modeEl.innerHTML = `${game.skin}`;
 }, false);
 
 document.getElementById('re-start').addEventListener('click', () => {
