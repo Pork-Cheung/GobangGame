@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>五子棋</title>
+    <link rel="stylesheet" href="./index.css">
+    <script src="./dom.js" defer></script>
+    <script src="./canvas.js" defer></script>
+    <script src="./index.js" defer></script>
+</head>
+<body>
+    <header><h1>五子棋</h1></header>
+    <aside>
+        <p><span>模式：</span><span id="mode"></span></p>
+        <p id="player"></p>
+        <select name="board-length" id="length-selector">
+            <option value="5" label="5"></option>
+            <option value="10" label="10"></option>
+            <option value="15" label="15"></option>
+        </select>
+        <button id="change-style">换肤</button>
+        <button id="re-start">重新开始</button>
+        <button id="rollback">悔棋</button>
+        <button id="cancel-rollback">撤销悔棋</button>
+    </aside>
+    <div id="chessboard-container">
+    </div>
+</body>
+</html>
