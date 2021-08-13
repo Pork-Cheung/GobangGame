@@ -105,13 +105,13 @@ class GobangGame {
                 setTimeout(() => {
                     // 判赢
                     if(this.isWin(x,y)) {
-                        window.alert(this.chessBoardData[x][y] == 1? '白棋' : '黑棋' + ' Win!');
+                        window.alert((this.chessBoardData[x][y] == 1? 'White' : 'Black') + ' Win!');
                         this.reStart();
                         return;
                     }
                     // 判和
                     if(this.isDrawGame()) {
-                        window.alert('平局');
+                        window.alert('Draw Game!');
                         this.reStart();
                         return;
                     }
