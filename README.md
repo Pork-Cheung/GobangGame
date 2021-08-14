@@ -12,7 +12,9 @@ web版五子棋
 技术栈：js + css3
 
 基于mvc架构设计
+
 model
+
     game类：
         渲染器
         棋盘落子数据
@@ -38,11 +40,13 @@ model
             isCancelValid() -- 当前进度是否可以撤销悔棋
 
 controller
+
     监听用户操作
     将用户操作信息传递到model
     控制视图渲染
 
 view
+
     渲染器抽象基类：
         棋盘大小（n阶）
         棋盘渲染宽度（高度）
