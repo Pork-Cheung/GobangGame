@@ -1,3 +1,7 @@
+/**
+ * 视图层
+ */
+
 
 class DomBoard {
     constructor(playHandler, options) {
@@ -32,10 +36,7 @@ class DomBoard {
         dom.addEventListener('click',(e) => {
             e = e || window.event;
             let [x,y] = [...e.target.id.split(',').map(item => parseInt(item))];
-            let player = this.playHandler(x,y);
-            if(player) {
-                this.play(x, y, player);
-            }
+            this.playHandler(x,y);
         }, false);
         this.container.appendChild(dom)
         this.board = dom;

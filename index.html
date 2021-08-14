@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="./index.css">
     <script src="./dom.js" defer></script>
     <script src="./canvas.js" defer></script>
+    <script src="./game.js" defer></script>
     <script src="./index.js" defer></script>
 </head>
 <body>
@@ -13,12 +14,12 @@
         <meta charset="UTF-8">
         <p><span>模式：</span><span id="mode"></span></p>
         <p><span>轮到：</span><span id="player"></span></p>
-        <select name="board-length" id="length-selector">
-            <option value="5" label="5"></option>
-            <option value="10" label="10"></option>
+        <select name="board-length" id="length-selector" >
             <option value="15" label="15"></option>
+            <option value="10" label="10"></option>
+            <option value="5" label="5"></option>
         </select>
-        <button id="change-style">换肤</button>
+        <button id="change-style">切换渲染模式</button>
         <button id="re-start">重新开始</button>
         <button id="rollback">悔棋</button>
         <button id="cancel-rollback">撤销悔棋</button>

@@ -1,3 +1,7 @@
+/**
+ * 视图层
+ */
+
 
 class CanvasBoard {
     constructor(playHandler, options) {
@@ -35,12 +39,8 @@ class CanvasBoard {
         
         canvas.addEventListener('click', (e) => {
             e = e || window.event;
-            console.log(e)
             let [x,y] = [parseInt(e.offsetY / this.cellWidth), parseInt(e.offsetX / this.cellWidth)];
-            let player = this.playHandler(x,y);
-            if(player) {
-                this.play(x, y, player);
-            }
+            this.playHandler(x,y);
 
         }, false);
         this.container.appendChild(canvas)
